@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Arch Toolbox
+Comment=Tool integrato di manutenzione e sicurezza per Arch Linux
+Exec=python3 /usr/share/arch-toolbox/arch_toolbox.py
+Icon=utilities-system-monitor
+Terminal=false
+Type=Application
+Categories=System;Settings;
