@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import subprocess
 import threading
 import tkinter as tk
@@ -128,9 +129,12 @@ class ArchToolboxApp:
 
     def run_command_live(self, cmd, text_widget, task_type, use_sudo=False):
         text_widget.delete("1.0", tk.END)
+
         full_cmd = cmd
-        if use_sudo and self.sudo_password:
+        if (use_sudo or "yay" in cmd or "pacman" in cmd) and self.sudo_password:
             full_cmd = f"echo {self.sudo_password} | sudo -S {cmd}"
+        elif use_sudo and not self.sudo_password:
+            full_cmd = f"sudo {cmd}"
 
         text_widget.insert(
             tk.END, f"$ {cmd}\n[Esecuzione in corso...]\n" + "-" * 40 + "\n"
