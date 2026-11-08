@@ -9,7 +9,7 @@ class ArchToolboxApp:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Arch Maintenance & Security Toolbox")
+        self.root.title("Arch Maintenance & Security Toolbox v1.1")
         self.root.geometry("850x680")
 
         self.sudo_password = None
