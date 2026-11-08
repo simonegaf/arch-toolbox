@@ -22,6 +22,6 @@
 Clona la repository e lancia lo script di installazione con i permessi di root:
 
 ```bash
-git clone [https://github.com/simonegaf/arch-toolbox.git](https://github.com/simonegaf/arch-toolbox.git)
+git clone https://github.com/simonegaf/arch-toolbox.git
 cd arch-toolbox
 sudo ./install.sh
